@@ -1,0 +1,466 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>Yiğit Selçuk</title>
+    <link rel="shortcut icon" href="EVLJtGYUUAAOT9l.jpg" />
+    <link rel="stylesheet" href="sytle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins',sans-serif;
+            background-color: rgb(72, 65, 65);
+            background-size: 100%100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        header {
+            height: 100px;
+            border-bottom: 2px solid rgba(255,255,255,0.7)
+        }
+
+        nav ul li :hover {
+            transition: 0.7s ease;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+            header nav .logo a {
+                color: white;
+                font-weight: 700;
+                font-size: 20px;
+            }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            column-gap: 30px;
+        }
+
+            nav ul a {
+                color: white;
+                transition: color .25s ease;
+            }
+
+            nav ul li a:hover {
+                color: white;
+            }
+
+            nav ul li:hover {
+                border-bottom: 1.5px solid rgba(255,255,255,0.7)
+            }
+
+
+
+        @media(max-width:576px) {
+            .container {
+                width: 100%;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .content {
+                padding-top: 50px;
+            }
+
+                .content h1 {
+                    font-size: 36px;
+                }
+
+                .content p {
+                    font-size: 16px;
+                }
+
+                .content .links a {
+                    padding: 14px;
+                    width: 90px;
+                }
+
+                .content .links {
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 1rem;
+                }
+        }
+
+
+
+        .menu ul {
+            column-gap: 20px;
+        }
+
+            .menu ul li:hover {
+                margin-top: -1px;
+            }
+
+        .content {
+            color: white;
+            height: calc(100vh-100px);
+            padding-top: 150px;
+        }
+
+            .content h1 {
+                font-size: 60px;
+                text-align: center;
+            }
+
+            .content p {
+                font-size: 24px;
+                text-align: center;
+                margin-top: 32px;
+            }
+
+        .social-media {
+            position: absolute;
+            margin-top: -60px;
+            margin-left: 150px
+        }
+
+            .social-media div {
+                display: inline;
+                color: white;
+                display: inline-flex;
+                margin: 15px;
+                width: 60px;
+                height: 50px;
+                font-size: 40px;
+                margin-top: 400px;
+            }
+
+                .social-media div:hover {
+                    background-color: springgreen;
+                    border-radius: 50%;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 0.7s all
+                }
+
+
+                .social-media div:hover {
+                    transform: scale(1)rotate(360deg);
+                    transition: 1.6s all;
+                }
+
+            .social-media .twitter:hover {
+                background-color: #1da1f2
+            }
+
+            .social-media .google:hover {
+                background-color: #d34c3d;
+            }
+
+            .social-media .instagram:hover {
+                background-color: #b23b95
+            }
+
+            .social-media .facebook:hover {
+                background-color: #4267b2
+            }
+
+        .follow1 {
+            list-style: none;
+            font-size: 30px;
+            margin-top: 270px;
+            margin-left: 265px;
+            border-bottom: 2px solid rgba(255,255,255,0.7);
+            width: 14%
+        }
+
+        .form {
+            margin-left: 750px;
+            margin-top: -280px;
+            color: white;
+            padding: 2rem;
+        }
+
+            .form .baslık {
+                width: 36%;
+                margin-bottom: 30px;
+            }
+
+                .form .baslık a {
+                    font-size: 30px;
+                }
+
+        .form-control {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+            .form-control input, .form-control textarea {
+                padding: 0.5rem;
+                width: 60%;
+                background: transparent;
+                border: 0;
+                border-bottom: 2px solid white;
+                color: white;
+                font-size: 1rem;
+            }
+
+                .form-control input[type="submit"] {
+                    background-image: radial-gradient(circle at 5.87% 46.14%, #0099e8 0, #0096ef 7.14%, #0093f5 14.29%, #0090f8 21.43%, #008cf9 28.57%, #0087f8 35.71%, #3182f6 42.86%, #5f7cf1 50%, #7d76eb 57.14%, #946fe2 64.29%, #a868d9 71.43%, #b961ce 78.57%, #c759c2 85.71%, #d253b5 92.86%, #db4da7 100%);
+                    border: 0px;
+                    margin-top: 1rem;
+                    border-radius: 14px;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    transition: all 1s;
+                }
+
+                    .form-control input[type="submit"]:hover {
+                        background-image: linear-gradient(270deg, #d64343 0, #d64343 50%, #d64343 100%);
+                    }
+
+
+                .form-control input ~ label,
+                .form-control textarea ~ label {
+                    position: absolute;
+                    top: 0px;
+                    pointer-events: none;
+                    padding: 0.5rem;
+                    transition: 0.4s all
+                }
+
+                .form-control input:focus ~ label,
+                .form-control textarea:focus ~ label {
+                    top: -2rem;
+                    font-size: 0.8rem;
+                }
+
+                .form-control input:focus ~ label,
+                .form-control textarea:focus ~ label,
+                .form-control input:valid ~ label,
+                .form-control textarea:valid ~ label {
+                    top: -2rem;
+                    font-size: 0.8rem
+                }
+
+        @media(max-width:1048px) {
+            .container {
+                width: 100%;
+                margin-left: 12px;
+                margin-right: 12px;
+                font-size: 10px;
+            }
+        }
+
+        @media(max-width:1300px) {
+            .social-media {
+                margin-top: 350px;
+                margin-left: 10px;
+            }
+        }
+
+
+        @media(max-width:1300px) {
+            .form {
+                margin-top: -650px;
+                margin-left: -4px;
+                width: 100%;
+            }
+        }
+
+        @media(max-width:1300px) {
+            .form .baslık {
+                width: 100%
+            }
+        }
+
+        @media(max-width:1300px) {
+            .follow1 {
+                margin-top: 650px;
+                margin-left: 120px;
+                width: 44%
+            }
+        }
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+    <header class="container">
+        <nav>
+
+            <div class="logo">
+
+                <a style="color: #2cc0b9" a href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">Y</a>
+                <a style="color:#00bfcb" a href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">İ</a>
+                <a style="color: #00bfd3" a href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">Ğ</a>
+                <a style="color:#16bce2" a href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">İ</a>
+                <a style="color:#3fb9ed " a href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">T</a>
+                &nbsp;
+                <a style="color:#84aef3" a href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">S</a>
+                <a style="color: #a1a8ef" a href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">E</a>
+                <a style="color:#bba1e6" a href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">L</a>
+                <a style="color:#c69de0" a href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">Ç</a>
+                <a style="color:#d998d1" a href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">U</a>
+                <a style="color:#ec92b7" a href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">K</a>
+            </div>
+            <div class="menu">
+                <ul>
+
+                    <li class="home">
+                        <a style="color: #00b3ff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">H</a>
+                        <a style="color: #79a7ff " href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">o</a>
+                        <a style="color: #d090ff " href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">m</a>
+                        <a style="color: #ff7ae7" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishweb/finishweb/htmlpage.html">e</a>
+                    </li>
+                    <li class="about">
+                        <a style="color: #00b3ff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebabout/finishwebabout/htmlpage.html#">A</a>
+                        <a style="color: #45adff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebabout/finishwebabout/htmlpage.html#">b</a>
+                        <a style="color: #79a7ff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebabout/finishwebabout/htmlpage.html#">o</a>
+                        <a style="color: #9ca0ff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebabout/finishwebabout/htmlpage.html#">u</a>
+                        <a style="color: #b898ff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebabout/finishwebabout/htmlpage.html#">t</a>
+
+                    </li>
+                    <li class="contact">
+                        <a style="color: white; text-shadow: 0 0 5px #ffff34; 0 0 15px #ffff34;" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebcontact/finishwebcontact/htmlpage.html?#">C</a>
+                        <a style="color: white; text-shadow: 0 0 5px #ffff34; 0 0 15px #ffff34;" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebcontact/finishwebcontact/htmlpage.html?#">o</a>
+                        <a style="color: white; text-shadow: 0 0 5px #ffff34; 0 0 15px #ffff34;" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebcontact/finishwebcontact/htmlpage.html?#">n</a>
+                        <a style="color: white; text-shadow: 0 0 5px #ffff34; 0 0 15px #ffff34;" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebcontact/finishwebcontact/htmlpage.html?#">t</a>
+                        <a style="color: white; text-shadow: 0 0 5px #ffff34; 0 0 15px #ffff34; " href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebcontact/finishwebcontact/htmlpage.html?#">a</a>
+                        <a style="color: white; text-shadow: 0 0 5px #ffff34; 0 0 15px #ffff34;" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebcontact/finishwebcontact/htmlpage.html?#">c</a>
+                        <a style="color: white; text-shadow: 0 0 5px #ffff34; 0 0 15px #ffff34;" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebcontact/finishwebcontact/htmlpage.html?#">t</a>
+                    </li>
+                    <li class="projects">
+                        <a style="color: #00b3ff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebprojects/finishwebprojects/htmlpage.html">P</a>
+                        <a style="color: #45adff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebprojects/finishwebprojects/htmlpage.html">r</a>
+                        <a style="color: #79a7ff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebprojects/finishwebprojects/htmlpage.html">o</a>
+                        <a style="color: #9ca0ff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebprojects/finishwebprojects/htmlpage.html">j</a>
+                        <a style="color: #b898ff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebprojects/finishwebprojects/htmlpage.html">e</a>
+                        <a style="color: #d090ff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebprojects/finishwebprojects/htmlpage.html">c</a>
+                        <a style="color: #e589ff" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebprojects/finishwebprojects/htmlpage.html">t</a>
+                        <a style="color: #f681f6" href="file:///C:/Users/yigit/Desktop/Visual%20Studio/finishwebprojects/finishwebprojects/htmlpage.html">s</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+
+    <div class="social-media">
+        <div class="instagram"
+            <a style="margin-top:2px " href="https://www.instagram.com" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <div class="twitter"
+            <a style="margin-top:2px " href="https://twitter.com/YiitSeluk9"><i class="fa-brands fa-twitter"></i></a>
+
+        </div>
+        <div class="facebook"
+             <a style="margin-top:2px"  href="#"><i class="fa-brands fa-facebook"></i></a>
+
+
+        </div>
+        <div class="google"
+             <a style="margin-top:2px"  href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+
+
+        </div>
+        <div class="gmail">
+            <a style="margin-top:2px" href="#"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <div class="follow1">
+
+        <a style="color: #00b2ff">F</a>
+        <a style="color:#00aaff">o</a>
+        <a style="color:#5fa0ff">l</a>
+        <a style="color:#9d94ff">l</a>
+        <a style="color:#d880ef">o</a>
+        <a style="color:#f274d6">w</a>
+        &nbsp;
+        <a style="color:#ff69ab">M</a>
+        <a style="color:#ff698e">e</a>
+
+    </div>
+    <div class="form">
+
+        <div class="baslık">
+            <a style="color: #00a6ff">C</a>
+            <a style="color: #3ba0ff">o</a>
+            <a style="color: #6b9bff">n</a>
+            <a style="color: #8c94ff">t</a>
+            <a style="color: #bc87fc">a</a>
+            <a style="color: #cf80f1">c</a>
+            <a style="color: #ec73d7">t</a>
+            &nbsp;
+            <a style="color: #ff69ba">F</a>
+            <a style="color: #ff659b">o</a>
+            <a style="color: #ff687d">r</a>
+            <a style="color: #ff7160">m</a>
+
+        </div>
+
+
+
+        <form action="https://formspree.io/f/myyobnvg" method="POST">
+            <div class="form-control">
+                <input type="text" required />
+                <br>
+                <label for="#">Username</label>
+            </div>
+            <div class="form-control">
+                <input type="email" required />
+                <br>
+                <label for="#">Email</label>
+            </div>
+            <div class="form-control">
+                <input type="text" required />
+                <br>
+                <label for="#">Subject</label>
+            </div>
+            <div class="form-control">
+                <textarea cols="30" required rows="5"></textarea>
+                <br>
+                <label for="#">Message</label>
+
+            </div>
+            <div class="form-control">
+                <input type="submit" required value="Form Submit" />
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+</body>
+</html>
